@@ -1,0 +1,33 @@
+<div class="col-sm-5 col-md-5 col-lg-5 col-xs-12">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+        <img src="{{ player.image_uri.url }}" class="img-responsive pl-g" />
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 pl-ti">
+        {{ player.firstname }} {{ player.lastname }}
+    </div>
+</div>
+<div class="col-sm-7 col-md-7 col-lg-7 col-xs-12">
+    <table class="table table-bordered table-cust" style="">
+        <tr>
+            <th>Matches</th>
+            <td>{{ playerhistory.matches }}</td>
+        </tr>
+        <tr>
+            <th>Runs</th>
+            <td>{{ playerhistory.runs }}</td>
+        </tr>
+        <tr>
+            <th>Highest Score</th>
+            <td>{{ playerhistory.highest_score }}</td>
+        </tr>
+        <tr>
+            <th>50's</th>
+            <td>{{ playerhistory.fifties }}</td>
+        </tr>
+        <tr>
+            <th>100's</th>
+            <td>{{ playerhistory.hundreds }}</td>
+        </tr>
+
+    </table>
+</div>

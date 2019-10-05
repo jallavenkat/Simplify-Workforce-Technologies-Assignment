@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <img src="{% static 'images/5489.jpg' %}" class="img-responsive banner-img-cus" alt="Banner" style="width:100%;">
+    <div class="mt-tab">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="tx-center">Team</th>
+                    <th class="tx-center">Total Points</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for point in points %}
+                <tr>
+                    <td class="">
+                        <a href="javascript:;" class=" t-vw" id="t_{{point.team_id.id}}" title="{{point.team_id.team_name}}">
+                            <img src="{{ point.team_id.team_logo.url }}" style="width:32px;height:32px;" /> {{ point.team_id.team_name }}
+                        </a>
+                    </td>
+                    <td class="tx-center">{{ point.team_points }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="pb-5p">
+    <div class="container">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+            <h3 class="tx-center mb-3p h3-t">Players</h3>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+
+                <ul class="col-sm-12 col-md-12 col-lg-12 col-xs-12 plr-list">
+                {% for player in players %}
+                    <li class="col-sm-2 col-md-2 col-lg-2 col-xs-12">
+                        <a href="javascript:;" title="{{ player.firstname}} {{ player.lastname }}" class="player-item" player-id="{{ player.id }}">
+                            <img src="{{ player.image_uri.url}}" class="ply-itm" />
+                            {{ player.firstname}} {{ player.lastname }}
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+                <form method="post">
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="playerModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body row" id="playerBody">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

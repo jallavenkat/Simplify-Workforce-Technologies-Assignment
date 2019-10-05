@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <img src="{% static 'images/5489.jpg' %}" class="img-responsive banner-img-cus" alt="Banner" style="width:100%;">
+    <div class="mt-tab">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="tx-center">Team</th>
+                    <th class="tx-center">Total Points</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for point in points %}
+                <tr>
+                    <td class="">
+                        <a href="javascript:;" class=" t-vw" id="t_{{point.team_id.id}}" title="{{point.team_id.team_name}}">
+                            <img src="{{ point.team_id.team_logo.url }}" style="width:32px;height:32px;" /> {{ point.team_id.team_name }}
+                        </a>
+                    </td>
+                    <td class="tx-center">{{ point.team_points }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="pt-3p pb-5p">
+    <div class="container">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+            <h3 class="tx-center mb-3p h3-t">Matches</h3>
+
+            {% for match in matches %}
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12 mb-2p" title="{{match.team_a.team_name}} vs {{match.team_b.team_name}}">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 ml-view">
+                    <div class="col-sm-5 col-md-5 col-lg-5 col-xs-5  p-0 t-vw" id="t_{{match.team_a.id}}">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                            <img src="{{match.team_a.team_logo.url}}" >
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 p-0">
+                            <a href="">{{match.team_a.team_name}}</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2 col-xs-2 vs">Vs</div>
+                    <div class="col-sm-5 col-md-5 col-lg-5 col-xs-5  p-0 t-vw" id="t_{{match.team_b.id}}">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                            <img src="{{match.team_b.team_logo.url}}" >
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 p-0">
+                            <a href="">{{match.team_b.team_name}}</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

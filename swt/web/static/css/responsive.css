@@ -1,0 +1,83 @@
+@media screen and (min-width:320px) and (max-width:479px){
+.navbar-brand{padding:0px;}
+.navbar-toggle{margin:8px 0px;border:1px solid #fff;padding:5px 5px;}
+.navbar-toggle .icon-bar{background:#fff;width:18px;}
+.navbar{background:#000;}
+.banner-text{width:100%;left:0 !important;top:15% !important;}
+.banner-text h2{font-size:18px;}
+.banner-text p{font-size:13px;}
+.mbi-vw_{position:absolute;top:-90px;}
+.stabs li{color:#fff;font-size:14px;padding:10px 15px;}
+.stabs li.active{color:#ED1B24;}
+.tabsec input[type='text']{border-bottom:1px solid #ccc;border-right:0px !important;}
+select.cust-control, select.cust-control option{margin-bottom:10px;border-bottom:1px solid #ccc;}
+.owl-dot.active span{background:#ED1B24;}
+.owl-dot span{background:#000;}
+.banner-img-cus{height:485px !important;object-fit:cover;}
+.tabsec{background:none;}
+.brand-img{width:150px;}
+}
+
+
+@media screen and (min-width:320px) and (max-width:479px)and (orientation:landscape){
+	/*--index start--*/	
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+}
+@media screen and (min-width:320px) and (max-width:480px)and (orientation:landscape){
+}
+@media screen and (min-width:360px) and (max-width:740px){
+}
+@media screen and (min-width:360px) and (max-width:740px)and (orientation:landscape){
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+
+}
+@media screen and (min-width:768px) and (max-width:1024px)and (orientation:landscape){
+.banner-img-cus{width:100% !important;height:400px !important;object-fit:cover !important;}
+}
+@media screen and (min-width:2000px) and (max-width:3000px){
+	
+}
+
+@media screen and (min-width:1200px) and (max-width:1399px){
+	
+}
+@media screen and (min-width:1400px) and (max-width:2000px){
+	.banner-img-cus{width:100% !important;height:880px !important;object-fit:cover !important;}
+}
+@media screen and (min-width:2001px) and (max-width:4000px){
+	
+}
+@media screen and (min-width:375px) and (max-width:667px){	
+
+}
+
+@media screen and (min-width:375px) and (max-width:667px)and (orientation:landscape){
+
+}
+@media screen and (min-width:375px) and (max-width:812px){
+
+}
+@media screen and (min-width:375px) and (max-width:812px)and (orientation:landscape){
+
+}
+@media screen and (min-width:414px) and (max-width:736px){
+
+}
+@media screen and (min-width:414px) and (max-width:736px)and (orientation:landscape){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
